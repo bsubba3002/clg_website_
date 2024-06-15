@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us </title>
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="stylesheet" href="css/contact_style.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="image/logo.png" id="logo-img"></a>
+            
+            <div class="nav-links" id="navLinks">
+
+                <span class="icon" onclick="hidemenu()">&#10005;</span>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Admission_page.html">Admission</a></li>
+                    <li><a href="index.html#course_call">Course</a></li>
+                    <li><a href="fees_page.html">Fees</a></li>
+                    <li><a href="Contact_page.html">Contact</a></li>
+                </ul>
+            </div> 
+            <span class="icon" onclick="showmenu()">&#9776;</span>
+        </nav>
+        <div class="wrapper">
+		<div class="r_form_wrap">
+			
+			<div class="title">
+				<p><b><i><u> Library</u></i></b></p>
+			</div>
+			
+			<!-- Admission from -->
+			<div class="r_form">
+
+			<tt>
+                The VCET Library is housed in a spacious new building Krishna Chetana(ground floor). The library with a floor area of 877 sq meters. Segregated in to various sections like Lending, Reference, Digital library, Newspaper, Periodicals, Reading room etc.
+               <br><b><U>Digital Library</U></b> 
+Digital library having 12 systems with high speed internet facility. The digital Library exclusively used for the online access of e-Journals, e-books, conference proceedings, articles, educational videos and e-resources.	
+               <br> <b>Library Rules</b>
+                Maintain silence in the library.<br>
+               
+               Check- In and Check -out is must to use the library resources..<br>
+               
+               Personal belongings like bag, personal books, and umbrella etc. are not allowed in to the library..<br>
+               
+               Student ID card is not transferable. The borrower is responsible for the books borrowed on his/her card..<br>
+               
+               Books will be issued after scanning   the student ID card for 14 days only..<br>
+               
+               Students are required to check the books while borrowing and they will be responsible for any type of damage noticed at the time of return..<br>
+               
+               Overdue Charges- First 30days after the due date Rs.1 per day, After 30days Rs.2 per day.  .<br>                                                            
+               
+               Members must replace the book if lost with latest edition along with overdue charges..<br>
+               
+               No discussion is permitted inside the library..<br>
+               
+               Refreshment of any kind shall not be taken in to the library..<br>
+               
+               Produce ID card whenever no due certificate is to be collected from the library and there should not be any dues on borrowed books.
+               
+               
+</tt>
+
+				
+
+				
+					</div>
+					
+	
+					
+					<div ></div>
+					
+					
+				</form>
+			</div>
+        </div>
+        </div>
+    </section>
+
+    <div class="none_div"></div>
+   
+
+    
+</body>
+<script src=" https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendmail(){
+		Email.send({}).then(
+	message => alert("Your Message Is Successful")
+);
+		}
+    </script>
+<script>
+    var navLinks= document.getElementById("navLinks");
+
+function showmenu(){
+    navLinks.style.right="0";
+}   
+function hidemenu(){
+    navLinks.style.right="-200px";
+}
+</script>
+
+</html>
+
+
+ 

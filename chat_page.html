@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat </title>
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/svg+xml">
+    <link rel="stylesheet" href="css/fees_style.CSS">
+    <link rel="stylesheet" href="css/chat_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="javascript/chat_script.js"></script>
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="image/logo.png" id="logo-img"></a>
+
+            <div class="nav-links" id="navLinks">
+
+                <span class="icon" onclick="hidemenu()">&#10005;</span>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Admission_page.html">Admission</a></li>
+                    <li><a href="index.html#course_call">Course</a></li>
+                    <li><a href="fees_page.html">Fees</a></li>
+                    <li><a href="Contact_page.html">Contact</a></li>
+                </ul>
+            </div>
+            <span class="icon" onclick="showmenu()">&#9776;</span>
+        </nav>
+
+
+        <form onsubmit="pay()">
+            <div class="wrapper">
+
+                <div class="r_form">
+                    <form method="post" onsubmit="sendmail(); reset(); return false;">
+
+
+                        <div class="chat_window">
+                            <div class="top_menu">
+                                <div class="buttons">
+                                    <div class="button close"></div>
+                                    <div class="button minimize"></div>
+                                    <div class="button maximize"></div>
+                                </div>
+                                <div class="title">Chat</div>
+                            </div>
+                            <ul class="messages"></ul>
+                            <div class="bottom_wrapper clearfix">
+                                <div class="message_input_wrapper"><input class="message_input"
+                                        placeholder="Type your message here..." /></div>
+                                <div class="send_message">
+                                    <div class="icon"></div>
+                                    <div class="text">Send</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message_template">
+                            <li class="message">
+                                <div class="avatar"></div>
+                                <div class="text_wrapper">
+                                    <div class="text"></div>
+                                </div>
+                            </li>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </form>
+
+
+    </section>
+
+    <div class="none_div">
+    </div>
+
+</body>
+<script src="javascript/fees_script.js"></script>
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showmenu() {
+        navLinks.style.right = "0";
+    }
+    function hidemenu() {
+        navLinks.style.right = "-200px";
+    }
+    function sendmail() {
+        Email.send({}).then(
+            message => alert("Thanks you")
+        );
+    }
+</script>
+<script src=" https://smtpjs.com/v3/smtp.js"></script>
+
+</html>
